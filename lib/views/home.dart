@@ -52,9 +52,7 @@ class _HomeState extends State<Home>
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Row(
-                    mainAxisAlignment: kIsWeb
-                        ? MainAxisAlignment.start
-                        : MainAxisAlignment.center,
+                    mainAxisAlignment: kIsWeb ? MainAxisAlignment.start : MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
                         "AKDroid",
@@ -105,13 +103,13 @@ class _HomeState extends State<Home>
                                 color: Colors.white,
                                 fontFamily: 'Overpass'),
                             decoration: InputDecoration(
-                              hintText: "Enter Ingridients",
+                              hintText: "Enter Ingredients",
                               hintStyle: TextStyle(
                                   fontSize: 16,
                                   color: Colors.white.withOpacity(0.5),
                                   fontFamily: 'Overpass'),
-                              enabledBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(color: Colors.white),
+                                  enabledBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.white),
                               ),
                               focusedBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(color: Colors.white),
@@ -132,14 +130,13 @@ class _HomeState extends State<Home>
                                   _loading = true;
                                 });
                                 recipies = new List();
-                                String url =
-                                    "https://api.edamam.com/search?q=${textEditingController.text}&app_id=0f21d949&app_key=8bcdd93683d1186ba0555cb95e64ab26";
+                                String url = "https://api.edamam.com/search?q=${textEditingController.text}&app_id=0f21d949&app_key=8bcdd93683d1186ba0555cb95e64ab26";
                                 var response = await http.get(url);
                                 print(" $response this is response");
-                                Map<String, dynamic> jsonData =
-                                jsonDecode(response.body);
+                                Map<String, dynamic> jsonData = jsonDecode(response.body);
                                 print("this is json Data $jsonData");
-                                jsonData["hits"].forEach((element) {
+                                jsonData["hits"].forEach((element)
+                                {
                                   print(element.toString());
                                   RecipeModel recipeModel = new RecipeModel();
                                   recipeModel = RecipeModel.fromMap(element['recipe']);
@@ -191,7 +188,8 @@ class _HomeState extends State<Home>
                         shrinkWrap: true,
                         scrollDirection: Axis.vertical,
                         physics: ClampingScrollPhysics(),
-                        children: List.generate(recipies.length, (index) {
+                        children: List.generate(recipies.length, (index)
+                        {
                           return GridTile(
                               child: RecipieTile(
                                 title: recipies[index].label,
@@ -310,7 +308,7 @@ class GradientCard extends StatelessWidget
   final String topColorCode;
   final String bottomColorCode;
 
-  GradientCard(
+      GradientCard(
       {
         this.topColor,
         this.bottomColor,
