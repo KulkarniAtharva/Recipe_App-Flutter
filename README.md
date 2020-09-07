@@ -1,16 +1,13 @@
-# recipe_app
+# Recipe App
 
-A new Flutter application.
 
-## Getting Started
+![recipe](https://user-images.githubusercontent.com/47221267/92388703-5af83c80-f135-11ea-9198-27441adb71d0.png)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+• Fetch data from an api with flutter
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+• How useState in flutter
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+• How to pass down data in flutter on widgets
+
+• How to show a grid view
