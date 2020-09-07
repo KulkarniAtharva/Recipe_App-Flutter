@@ -51,6 +51,9 @@ class _HomeState extends State<Home>
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
+                  SizedBox(
+                    height: 40,
+                  ),
                   Row(
                     mainAxisAlignment: kIsWeb ? MainAxisAlignment.start : MainAxisAlignment.center,
                     children: <Widget>[

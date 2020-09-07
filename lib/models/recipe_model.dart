@@ -1,4 +1,5 @@
-class RecipeModel {
+class RecipeModel
+{
   final String image;
   final String url;
   final String source;
@@ -6,7 +7,8 @@ class RecipeModel {
 
   RecipeModel({this.image, this.url, this.label, this.source});
 
-  factory RecipeModel.fromMap(Map<String, dynamic> parsedJson) {
+  factory RecipeModel.fromMap(Map<String, dynamic> parsedJson)
+  {
     return RecipeModel(
         image: parsedJson["image"],
         url: parsedJson["url"],
